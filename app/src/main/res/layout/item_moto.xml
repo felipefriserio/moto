@@ -14,12 +14,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:id="@+id/tvModelo"
         tools:text="Modelo"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:id="@+id/tvMarca"
         tools:text="Marca"/>
 

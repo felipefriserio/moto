@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Moto</string>
+    <string name="view_motos">Ver Motos</string>
+    <string name="about">Sobre</string>
+</resources>

@@ -4,7 +4,7 @@
     <item
         android:id="@+id/navigation_lista"
         android:icon="@drawable/ic_home_black_24dp"
-        android:title="Ver Motos" />
+        android:title="@string/view_motos" />
 
     <item
         android:id="@+id/navigation_novo"
@@ -14,6 +14,6 @@
     <item
         android:id="@+id/navigation_sobre"
         android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="Sobre" />
+        android:title="@string/about" />
 
 </menu>
