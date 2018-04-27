@@ -1,4 +1,4 @@
-package br.com.android.moto.ui.listamotos
+package br.com.android.moto.ui.listmoto
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -24,7 +24,7 @@ import retrofit2.Response
 /**
  * A simple [Fragment] subclass.
  */
-class ListaMotosFragment : Fragment() {
+class ListMotoFragment : Fragment() {
 
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
@@ -67,7 +67,7 @@ class ListaMotosFragment : Fragment() {
 
     fun setupLista(motos: List<Moto>?) {
         motos.let {
-            rvMotos.adapter = ListaMotosAdapter(motos!!, context)
+            rvMotos.adapter = ListMotoAdapter(motos!!, context)
             val layoutManager = LinearLayoutManager(context)
             rvMotos.layoutManager = layoutManager
         }

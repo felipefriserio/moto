@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Moto</string>
+    <string name="app_name">Motocicleta</string>
     <string name="view_motos">Ver Motos</string>
     <string name="about">Sobre</string>
+    <string name="new_moto">Nova Moto</string>
 </resources>

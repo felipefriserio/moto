@@ -1,4 +1,4 @@
-package br.com.android.moto.ui.listamotos
+package br.com.android.moto.ui.listmoto
 
 import android.content.Context
 import android.support.v4.content.ContextCompat
@@ -12,8 +12,8 @@ import com.example.logonrm.carros.R
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_moto.view.*
 
-class ListaMotosAdapter(private val motos: List<Moto>,
-                        private val context: Context) : RecyclerView.Adapter<ListaMotosAdapter.MeuViewHolder>() {
+class ListMotoAdapter(private val motos: List<Moto>,
+                      private val context: Context) : RecyclerView.Adapter<ListMotoAdapter.MeuViewHolder>() {
 
     override fun getItemCount(): Int {
         return motos.size

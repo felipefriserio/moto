@@ -1,3 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">moto</string>
+    <string name="app_name">Motorcycle</string>
+    <string name="view_motos">View Motorcycles</string>
+    <string name="new_moto">New Motorcycle</string>
+    <string name="about">About</string>
 </resources>
