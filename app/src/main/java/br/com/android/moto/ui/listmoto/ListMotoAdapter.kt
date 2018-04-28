@@ -43,8 +43,8 @@ class ListMotoAdapter(private val motos: List<Moto>,
             } else {
                 Picasso.get()
                         .load(moto.urlImagem)
-                        .noPlaceholder()
-                        //placeholder(R.drawable.carropadrao)
+                        //.noPlaceholder()
+                        .placeholder(R.drawable.moto)
                         .error(R.drawable.procurando)
                         .into(itemView.ivFoto);
             }

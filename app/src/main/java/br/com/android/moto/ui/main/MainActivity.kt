@@ -5,6 +5,7 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import br.com.android.moto.ui.about.AboutFragment
+import br.com.android.moto.ui.includemoto.IncludeMotoFragment
 import br.com.android.moto.ui.listmoto.ListMotoFragment
 import com.example.logonrm.carros.R
 import kotlinx.android.synthetic.main.activity_main.*
