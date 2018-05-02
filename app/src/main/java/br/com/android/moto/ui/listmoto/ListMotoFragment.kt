@@ -1,5 +1,6 @@
 package br.com.android.moto.ui.listmoto
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -7,13 +8,15 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.Toast
+import br.com.android.moto.R
 import br.com.android.moto.api.MotoAPI
 import br.com.android.moto.api.RetrofitClient
 import br.com.android.moto.model.Moto
-import com.example.logonrm.carros.R
 
 import kotlinx.android.synthetic.main.erro.*
-import kotlinx.android.synthetic.main.fragment_lista_motos.*
+import kotlinx.android.synthetic.main.fragment_list_moto.*
 import kotlinx.android.synthetic.main.loading.*
 
 import retrofit2.Call
@@ -26,10 +29,11 @@ import retrofit2.Response
  */
 class ListMotoFragment : Fragment() {
 
+    var moto: Moto = Moto("","","",0,"")
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater!!.inflate(R.layout.fragment_lista_motos, container, false)
+    return inflater!!.inflate(R.layout.fragment_list_moto, container, false)
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
@@ -41,6 +45,7 @@ class ListMotoFragment : Fragment() {
         var api = RetrofitClient.getInstance().create(MotoAPI::class.java)
 
         loading.visibility = View.VISIBLE
+
 
         api.buscarTodos().enqueue(object : Callback<List<Moto>> {
             override fun onResponse(call: Call<List<Moto>>?, response: Response<List<Moto>>?) {

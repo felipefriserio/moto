@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Motocicleta</string>
+    <!--menu-->
+    <string name="app_name">Motoicleta</string>
     <string name="view_motos">Ver Motos</string>
+    <string name="register">Cadastro</string>
     <string name="about">Sobre</string>
-    <string name="new_moto">Nova Moto</string>
+    <string name="quit">Sair</string>
+    <string name="login">Entrar</string>
+
+    <!--form-->
+    <string name="brand">Marca</string>
+    <string name="model">Modelo</string>
+    <string name="year">Ano</string>
+    <string name="license_plate">Placa</string>
+    <string name="url">URL</string>
+
+    <string name="success">Sucesso</string>
+    <string name="error">Erro</string>
+
+    <!--autentication-->
+    <string name="auth_failed">Autenticação falhou. Use pelo menos 1 número e 1 caracter maiúsculo</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Senha</string>
+    <string name="sign_in">Entrar</string>
+    <string name="create_account">Criar Conta</string>
+
+    <string name="app_version">Versão do app: 1.0.0</string>
+
+
+
 </resources>

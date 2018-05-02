@@ -5,7 +5,8 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.logonrm.carros.R
+import br.com.android.moto.R
+
 
 class AboutFragment : Fragment() {
 

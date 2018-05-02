@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     tools:context="br.com.android.moto.ui.main.MainActivity">
 
+
     <!-- above define que ficara sobre o painel de navegacao-->
     <FrameLayout
         android:id="@+id/containerFragment"

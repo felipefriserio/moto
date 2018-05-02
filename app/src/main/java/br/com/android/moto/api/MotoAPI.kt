@@ -2,9 +2,7 @@ package br.com.android.moto.api
 
 import br.com.android.moto.model.Moto
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface MotoAPI{
 
@@ -13,6 +11,9 @@ interface MotoAPI{
 
     @POST("/moto")
     fun salvar(@Body moto: Moto) : Call<Void>
+
+    @HTTP(method = "DELETE", path = "/moto", hasBody = true)
+    fun excluir(@Body moto : Moto) : Call<Void>
 
 }
 

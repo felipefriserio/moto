@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.logonrm.carros">
+    package="br.com.android.moto">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -21,8 +21,12 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="br.com.android.moto.ui.login.LoginActivity"
+            android:label="LoginActivity"></activity>
+        <activity
             android:name="br.com.android.moto.ui.main.MainActivity"
             android:label="MainActivity"></activity>
+
     </application>
 
 </manifest>

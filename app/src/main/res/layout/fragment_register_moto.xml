@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:hint="Marca"
+                    android:hint="@string/brand"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </android.support.design.widget.TextInputLayout>
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:hint="Modelo"
+                    android:hint="@string/model"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </android.support.design.widget.TextInputLayout>
@@ -47,7 +47,7 @@
 
                 <EditText
                     android:inputType="number"
-                    android:hint="Ano"
+                    android:hint="@string/year"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </android.support.design.widget.TextInputLayout>
@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:hint="Placa"
+                    android:hint="@string/license_plate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </android.support.design.widget.TextInputLayout>
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:hint="Url"
+                    android:hint="@string/url"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </android.support.design.widget.TextInputLayout>
@@ -80,6 +80,15 @@
         </LinearLayout>
 
     </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btDeletar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_delete"
+        app:layout_anchorGravity="bottom|right|end"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/btSalvar"
