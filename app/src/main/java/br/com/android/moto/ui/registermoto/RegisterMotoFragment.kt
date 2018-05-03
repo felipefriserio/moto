@@ -27,8 +27,19 @@ class RegisterMotoFragment : Fragment() {
         return inflater!!.inflate(R.layout.fragment_register_moto, container, false)
     }
 
+     fun verificaCampos(): Boolean{
+        if ( inputPlaca.editText?.text.toString().isNullOrEmpty()  ||
+             inputMarca.editText?.text.toString().isNullOrEmpty()  ||
+             inputModelo.editText?.text.toString().isNullOrEmpty() ||
+             inputAno.editText?.text.toString().isNullOrEmpty()){
+            return false
+        }else
+            return true
+    }
+
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
         if (!moto.placa.isNullOrEmpty()) {
             inputMarca.editText?.setText(moto.marca)
@@ -40,6 +51,11 @@ class RegisterMotoFragment : Fragment() {
 
 
         btSalvar.setOnClickListener{
+
+            if (!verificaCampos()){
+                Toast.makeText(context, R.string.four_fill, Toast.LENGTH_SHORT).show()
+            }else{
+
             val api = RetrofitClient
                     .getInstance()
                     .create(MotoAPI :: class.java)
@@ -69,40 +85,47 @@ class RegisterMotoFragment : Fragment() {
                             }
                         }
                     })
+            }
         }
 
 
 
         btDeletar.setOnClickListener {
-            val api = RetrofitClient
-                    .getInstance()
-                    .create(MotoAPI :: class.java)
 
-            val moto = Moto(
-                    inputPlaca.editText?.text.toString(),
-                    inputMarca.editText?.text.toString(),
-                    inputModelo.editText?.text.toString(),
-                    inputAno.editText?.text.toString().toInt(),
-                    inputUrl.editText?.text.toString()
-            )
+            if(inputPlaca.editText?.text.toString().isNullOrEmpty()){
+                Toast.makeText(context, R.string.license_plate_fill, Toast.LENGTH_SHORT).show()
+            }else{
 
-            api.excluir(moto)
-                    .enqueue(object : Callback<Void>{
-                        override fun onFailure(call: Call<Void>?, t: Throwable?) {
-                            Log.e("ERRO!!!!", t?.message)
-                        }
+                val api = RetrofitClient
+                        .getInstance()
+                        .create(MotoAPI :: class.java)
 
-                        override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
-                            if (response?.isSuccessful == true){
-                                Toast.makeText(context, R.string.success, Toast.LENGTH_SHORT).show()
-                                var act = context as MainActivity
-                                act.changeFragment(ListMotoFragment())
-                                limparCampos()
-                            }else{
-                                Toast.makeText(context, R.string.error, Toast.LENGTH_SHORT).show()
+                val moto = Moto(
+                        inputPlaca.editText?.text.toString(),
+                        inputMarca.editText?.text.toString(),
+                        inputModelo.editText?.text.toString(),
+                        inputAno.editText?.text.toString().toInt(),
+                        inputUrl.editText?.text.toString()
+                )
+
+                api.excluir(moto)
+                        .enqueue(object : Callback<Void>{
+                            override fun onFailure(call: Call<Void>?, t: Throwable?) {
+                                Log.e("ERRO!!!!", t?.message)
                             }
-                        }
-                    })
+
+                            override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
+                                if (response?.isSuccessful == true){
+                                    Toast.makeText(context, R.string.success, Toast.LENGTH_SHORT).show()
+                                    var act = context as MainActivity
+                                    act.changeFragment(ListMotoFragment())
+                                    limparCampos()
+                                }else{
+                                    Toast.makeText(context, R.string.error, Toast.LENGTH_SHORT).show()
+                                }
+                            }
+                        })
+            }
         }
 
 

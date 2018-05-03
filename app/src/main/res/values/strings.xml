@@ -17,8 +17,12 @@
 
     <string name="app_version">App Version: 1.0.0</string>
 
+
     <string name="success">Success</string>
     <string name="error">Error</string>
+
+    <string name="four_fill">Fill at least the first 4 fields</string>
+    <string name="license_plate_fill">Fill the license plate field</string>
 
     <!--autentication-->
     <string name="auth_failed">Authentication failed. Use at least one number and one upper case character</string>

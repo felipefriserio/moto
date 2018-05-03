@@ -13,6 +13,9 @@ import br.com.android.moto.ui.registermoto.RegisterMotoFragment
 import br.com.android.moto.ui.main.MainActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_moto.view.*
+import android.support.design.widget.BottomNavigationView
+
+
 
 class ListMotoAdapter(private val motos: List<Moto>,
                       private val context: Context) : RecyclerView.Adapter<ListMotoAdapter.MeuViewHolder>() {

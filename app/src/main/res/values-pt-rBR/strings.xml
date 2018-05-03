@@ -18,6 +18,9 @@
     <string name="success">Sucesso</string>
     <string name="error">Erro</string>
 
+    <string name="four_fill">Preencha os primeiros quatro campos</string>
+    <string name="license_plate_fill">Preencha o campo Placa</string>
+
     <!--autentication-->
     <string name="auth_failed">Autenticação falhou. Use pelo menos 1 número e 1 caracter maiúsculo</string>
     <string name="hint_email">Email</string>
